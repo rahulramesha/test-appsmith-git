@@ -1,0 +1,407 @@
+{
+  "unpublishedPage": {
+    "name": "Page1",
+    "slug": "page1",
+    "layouts": [
+      {
+        "viewMode": false,
+        "dsl": {
+          "widgetName": "MainContainer",
+          "backgroundColor": "none",
+          "rightColumn": 656,
+          "snapColumns": 64,
+          "detachFromLayout": true,
+          "widgetId": "0",
+          "topRow": 0,
+          "bottomRow": 2860,
+          "containerStyle": "none",
+          "snapRows": 128,
+          "parentRowSpace": 1,
+          "type": "CANVAS_WIDGET",
+          "canExtend": true,
+          "version": 65,
+          "minHeight": 1292,
+          "parentColumnSpace": 1,
+          "dynamicBindingPathList": [],
+          "leftColumn": 0,
+          "children": [
+            {
+              "boxShadow": "none",
+              "widgetName": "Table1",
+              "columnOrder": [
+                "id",
+                "email",
+                "userName",
+                "productName",
+                "orderAmount",
+                "undefined",
+                "customColumn1"
+              ],
+              "isVisibleDownload": true,
+              "dynamicPropertyPathList": [
+                {
+                  "key": "primaryColumns.id.onClick"
+                }
+              ],
+              "topRow": 48,
+              "bottomRow": 71,
+              "parentRowSpace": 10,
+              "isSortable": true,
+              "type": "TABLE_WIDGET",
+              "parentColumnSpace": 74,
+              "dynamicTriggerPathList": [
+                {
+                  "key": "primaryColumns.id.onClick"
+                }
+              ],
+              "leftColumn": 0,
+              "dynamicBindingPathList": [
+                {
+                  "key": "tableData"
+                },
+                {
+                  "key": "primaryColumns.id.computedValue"
+                },
+                {
+                  "key": "primaryColumns.email.computedValue"
+                },
+                {
+                  "key": "primaryColumns.userName.computedValue"
+                },
+                {
+                  "key": "primaryColumns.productName.computedValue"
+                },
+                {
+                  "key": "primaryColumns.orderAmount.computedValue"
+                },
+                {
+                  "key": "accentColor"
+                },
+                {
+                  "key": "derivedColumns.id.borderRadius"
+                },
+                {
+                  "key": "primaryColumns.id.borderRadius"
+                },
+                {
+                  "key": "derivedColumns.id.boxShadow"
+                },
+                {
+                  "key": "primaryColumns.id.boxShadow"
+                },
+                {
+                  "key": "derivedColumns.id.buttonLabel"
+                },
+                {
+                  "key": "primaryColumns.id.buttonLabel"
+                },
+                {
+                  "key": "derivedColumns.customColumn1.menuColor"
+                },
+                {
+                  "key": "primaryColumns.customColumn1.menuColor"
+                },
+                {
+                  "key": "derivedColumns.customColumn1.borderRadius"
+                },
+                {
+                  "key": "primaryColumns.customColumn1.borderRadius"
+                },
+                {
+                  "key": "derivedColumns.customColumn1.boxShadow"
+                },
+                {
+                  "key": "primaryColumns.customColumn1.boxShadow"
+                },
+                {
+                  "key": "derivedColumns.customColumn1.menuButtonLabel"
+                },
+                {
+                  "key": "primaryColumns.customColumn1.menuButtonLabel"
+                }
+              ],
+              "primaryColumns": {
+                "id": {
+                  "index": 0,
+                  "width": 150,
+                  "id": "id",
+                  "alias": "id",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "button",
+                  "textSize": "0.875rem",
+                  "fontStyle": "REGULAR",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": false,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "id",
+                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.id))}}",
+                  "borderRadius": "{{Table1.sanitizedTableData.map((currentRow) => ( appsmith.theme.borderRadius.appBorderRadius))}}",
+                  "boxShadow": "{{Table1.sanitizedTableData.map((currentRow) => ( 'none'))}}",
+                  "buttonColor": "transparent",
+                  "iconName": "",
+                  "buttonLabel": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.orderAmount))}}",
+                  "onClick": "{{showAlert('Successful' + currentRow.email).then(() => showAlert('second alert')) }}"
+                },
+                "email": {
+                  "index": 1,
+                  "width": 150,
+                  "id": "email",
+                  "alias": "email",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "0.875rem",
+                  "fontStyle": "REGULAR",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "email",
+                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.email))}}",
+                  "borderRadius": "0px",
+                  "boxShadow": "none"
+                },
+                "userName": {
+                  "index": 2,
+                  "width": 150,
+                  "id": "userName",
+                  "alias": "userName",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "0.875rem",
+                  "fontStyle": "REGULAR",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "userName",
+                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.userName))}}",
+                  "borderRadius": "0px",
+                  "boxShadow": "none"
+                },
+                "productName": {
+                  "index": 3,
+                  "width": 150,
+                  "id": "productName",
+                  "alias": "productName",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "0.875rem",
+                  "fontStyle": "REGULAR",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "productName",
+                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.productName))}}",
+                  "borderRadius": "0px",
+                  "boxShadow": "none"
+                },
+                "orderAmount": {
+                  "index": 4,
+                  "width": 150,
+                  "id": "orderAmount",
+                  "alias": "orderAmount",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "0.875rem",
+                  "fontStyle": "REGULAR",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "orderAmount",
+                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.orderAmount))}}",
+                  "borderRadius": "0px",
+                  "boxShadow": "none"
+                },
+                "customColumn1": {
+                  "index": 5,
+                  "width": 150,
+                  "id": "customColumn1",
+                  "columnType": "menuButton",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": true,
+                  "label": "customColumn1",
+                  "computedValue": "",
+                  "buttonStyle": "rgb(3, 179, 101)",
+                  "labelColor": "#FFFFFF",
+                  "menuColor": "{{Table1.sanitizedTableData.map((currentRow) => ( appsmith.theme.colors.primaryColor))}}",
+                  "borderRadius": "{{Table1.sanitizedTableData.map((currentRow) => ( appsmith.theme.borderRadius.appBorderRadius))}}",
+                  "boxShadow": "{{Table1.sanitizedTableData.map((currentRow) => ( 'none'))}}",
+                  "iconName": "",
+                  "menuButtonLabel": "{{Table1.sanitizedTableData.map((currentRow) => ( 'Menu button'))}}",
+                  "menuItems": {
+                    "menuItemx0ltp8n9l2": {
+                      "id": "menuItemx0ltp8n9l2",
+                      "index": 0,
+                      "label": "Menu Item 1",
+                      "widgetId": "uaflfyqo1g",
+                      "isDisabled": false,
+                      "isVisible": true
+                    }
+                  }
+                },
+                "undefined": {
+                  "buttonColor": "transparent",
+                  "borderRadius": [
+                    "0.375rem",
+                    "0.375rem",
+                    "0.375rem"
+                  ],
+                  "boxShadow": [
+                    "none",
+                    "none",
+                    "none"
+                  ],
+                  "buttonLabel": [
+                    4.99,
+                    9.99,
+                    19.99
+                  ],
+                  "isVisible": false,
+                  "index": 5
+                }
+              },
+              "delimiter": ",",
+              "migrated": true,
+              "derivedColumns": {
+                "id": {
+                  "buttonColor": "transparent",
+                  "borderRadius": "{{Table1.sanitizedTableData.map((currentRow) => ( appsmith.theme.borderRadius.appBorderRadius))}}",
+                  "boxShadow": "{{Table1.sanitizedTableData.map((currentRow) => ( 'none'))}}",
+                  "buttonLabel": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.orderAmount))}}",
+                  "isVisible": false
+                },
+                "customColumn1": {
+                  "index": 5,
+                  "width": 150,
+                  "id": "customColumn1",
+                  "columnType": "menuButton",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": true,
+                  "label": "customColumn1",
+                  "computedValue": "",
+                  "buttonStyle": "rgb(3, 179, 101)",
+                  "labelColor": "#FFFFFF",
+                  "menuColor": "{{Table1.sanitizedTableData.map((currentRow) => ( appsmith.theme.colors.primaryColor))}}",
+                  "borderRadius": "{{Table1.sanitizedTableData.map((currentRow) => ( appsmith.theme.borderRadius.appBorderRadius))}}",
+                  "boxShadow": "{{Table1.sanitizedTableData.map((currentRow) => ( 'none'))}}",
+                  "iconName": "",
+                  "menuButtonLabel": "{{Table1.sanitizedTableData.map((currentRow) => ( 'Menu button'))}}"
+                }
+              },
+              "labelTextSize": "0.875rem",
+              "rightColumn": 57,
+              "textSize": "0.875rem",
+              "widgetId": "sb070qr2ir",
+              "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+              "isVisibleFilters": true,
+              "tableData": "{{\n[\n  {\n    \"id\": 2381224,\n    \"email\": \"michael.lawson@reqres.in\",\n    \"userName\": \"Michael Lawson\",\n    \"productName\": \"Chicken Sandwich\",\n    \"orderAmount\": 4.99\n  },\n  {\n    \"id\": 2736212,\n    \"email\": \"lindsay.ferguson@reqres.in\",\n    \"userName\": \"Lindsay Ferguson\",\n    \"productName\": \"Tuna Salad\",\n    \"orderAmount\": 9.99\n  },\n  {\n    \"id\": 6788734,\n    \"email\": \"tobias.funke@reqres.in\",\n    \"userName\": \"Tobias Funke\",\n    \"productName\": \"Beef steak\",\n    \"orderAmount\": 19.99\n  }\n]\n}}",
+              "isVisible": true,
+              "label": "Data",
+              "searchKey": "",
+              "fontStyle": "REGULAR",
+              "version": 3,
+              "parentId": "0",
+              "isLoading": false,
+              "horizontalAlignment": "LEFT",
+              "isVisibleSearch": true,
+              "childStylesheet": {
+                "button": {
+                  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+                  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                  "boxShadow": "none"
+                },
+                "menuButton": {
+                  "menuColor": "{{appsmith.theme.colors.primaryColor}}",
+                  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                  "boxShadow": "none"
+                },
+                "iconButton": {
+                  "menuColor": "{{appsmith.theme.colors.primaryColor}}",
+                  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                  "boxShadow": "none"
+                }
+              },
+              "borderRadius": "0px",
+              "isVisiblePagination": true,
+              "verticalAlignment": "CENTER",
+              "columnSizeMap": {
+                "email": 261
+              }
+            },
+            {
+              "boxShadow": "none",
+              "widgetName": "Text1",
+              "displayName": "Text",
+              "topRow": 228,
+              "bottomRow": 284,
+              "parentRowSpace": 10,
+              "type": "TEXT_WIDGET",
+              "hideCard": false,
+              "parentColumnSpace": 17.28125,
+              "dynamicTriggerPathList": [],
+              "overflow": "NONE",
+              "fontFamily": "System Default",
+              "leftColumn": 48,
+              "dynamicBindingPathList": [
+                {
+                  "key": "text"
+                }
+              ],
+              "text": "{{Table1.triggeredRow.userName}}",
+              "key": "r76o6tqjaz",
+              "labelTextSize": "0.875rem",
+              "rightColumn": 60,
+              "textAlign": "LEFT",
+              "widgetId": "16zkg2v0na",
+              "isVisible": true,
+              "fontStyle": "BOLD",
+              "textColor": "#231F20",
+              "version": 1,
+              "parentId": "0",
+              "isLoading": false,
+              "borderRadius": "0px",
+              "fontSize": "0.875rem"
+            }
+          ]
+        },
+        "layoutOnLoadActions": [],
+        "layoutOnLoadActionErrors": [],
+        "validOnPageLoadActions": true,
+        "id": "Page1",
+        "deleted": false,
+        "policies": [],
+        "userPermissions": []
+      }
+    ],
+    "userPermissions": [],
+    "policies": []
+  },
+  "deleted": false,
+  "gitSyncId": "635806f46505435b6480b83a_635806f46505435b6480b83c"
+}
